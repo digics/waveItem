@@ -54,12 +54,12 @@ lspctaboff          = text.lspctaboff
 rspctaboff          = text.rspctaboff
 blank               = text.blank
 
-import  con
+import  _con
 
-conl                = con.conl
-conline             = con.conline
-stat                = con.stat
-iscont              = con.iscont
+conl                = _con.conl
+conline             = _con.conline
+stat                = _con.stat
+iscont              = _con.iscont
 
 import  common
 
@@ -786,7 +786,7 @@ def status( items, idx ):
 
     t = status_suffix( items, idx )
 
-    x = con.WIDTH
+    x = _con.WIDTH
     x = x - len( text.csioff( t ) )
 
     s = status_extra( item.filepath, x )
@@ -825,7 +825,7 @@ def status_towav( f, items, i ):
 
     t = status_suffix_towav( items, i )
 
-    x = con.WIDTH
+    x = _con.WIDTH
     x -= len( text.csioff( t ) )
 
     s = "TOWAV: "

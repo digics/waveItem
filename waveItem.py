@@ -163,11 +163,11 @@ lspctaboff          = text.lspctaboff
 rspctaboff          = text.rspctaboff
 blank               = text.blank
 
-import  con
+import  _con
 
-#conl                = con.conl
-conline             = con.conline
-stat                = con.stat
+#conl                = _con.conl
+conline             = _con.conline
+stat                = _con.stat
 
 import  common
 
@@ -238,13 +238,13 @@ def conl( t = "" ):
 
         progress_bar( "off" )
 
-        con.conl( t )
+        _con.conl( t )
 
         progress_bar( "on" )
 
     else:
 
-        con.conl( t )
+        _con.conl( t )
 
 
 ############################################
@@ -358,7 +358,7 @@ def progress_bar( t = "", i = 0, q = 0, m = 0 ):
 
         print( report.RESET_COLOR +
                '\r' +
-               ' ' * ( con.WIDTH - 1 ) + '\r',
+               ' ' * ( _con.WIDTH - 1 ) + '\r',
                end = "",
                flush = True )
 
@@ -438,7 +438,7 @@ def progress_bar( t = "", i = 0, q = 0, m = 0 ):
     pc = percent( i, q )
     pc = max( 0, min( 100, int( pc ) ) )
 
-    cw = con.WIDTH - 7 - len( t )
+    cw = _con.WIDTH - 7 - len( t )
     w = max( 1, cw )
 
     a = round( w * pc / 100 )

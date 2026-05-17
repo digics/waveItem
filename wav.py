@@ -48,12 +48,12 @@ lspctaboff          = text.lspctaboff
 rspctaboff          = text.rspctaboff
 blank               = text.blank
 
-import  con
+import  _con
 
-conl                = con.conl
-conline             = con.conline
-stat                = con.stat
-iscont              = con.iscont
+conl                = _con.conl
+conline             = _con.conline
+stat                = _con.stat
+iscont              = _con.iscont
 
 import  common
 
